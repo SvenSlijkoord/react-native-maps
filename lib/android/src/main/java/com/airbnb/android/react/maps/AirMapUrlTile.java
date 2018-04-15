@@ -29,11 +29,11 @@ public class AirMapUrlTile extends AirMapFeature {
           .replace("{z}", Integer.toString(zoom));
       URL url = null;
 
-      if(this.maximumZ && zoom > maximumZ) {
+      if(maximumZ != 0.0f && zoom > maximumZ) {
         return url;
       }
 
-      if(this.minimumZ && zoom < minimumZ) {
+      if(minimumZ != 0.0f && zoom < minimumZ) {
         return url;
       }
 
