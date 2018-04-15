@@ -54,7 +54,7 @@ public class MapsPackage implements ReactPackage {
         mapManager,
         mapLiteManager,
         tileManager,
-        heatmapManager);
+        heatmapManager,
         urlTileManager,
         localTileManager,
         overlayManager
