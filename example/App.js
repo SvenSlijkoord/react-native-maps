@@ -16,6 +16,7 @@ import MarkerTypes from './examples/MarkerTypes';
 import DraggableMarkers from './examples/DraggableMarkers';
 import PolygonCreator from './examples/PolygonCreator';
 import PolylineCreator from './examples/PolylineCreator';
+import GradientPolylines from './examples/GradientPolylines';
 import AnimatedViews from './examples/AnimatedViews';
 import AnimatedMarkers from './examples/AnimatedMarkers';
 import Callouts from './examples/Callouts';
@@ -35,7 +36,11 @@ import MapStyle from './examples/MapStyle';
 import LegalLabel from './examples/LegalLabel';
 import SetNativePropsOverlays from './examples/SetNativePropsOverlays';
 import CustomOverlay from './examples/CustomOverlay';
+import MapKml from './examples/MapKml';
 import BugMarkerWontUpdate from './examples/BugMarkerWontUpdate';
+import ImageOverlayWithAssets from './examples/ImageOverlayWithAssets';
+import ImageOverlayWithURL from './examples/ImageOverlayWithURL';
+import OnPoiClick from './examples/OnPoiClick';
 import Heatmap from './examples/Heatmap';
 
 const IOS = Platform.OS === 'ios';
@@ -132,6 +137,7 @@ class App extends React.Component {
       [DraggableMarkers, 'Draggable Markers', true],
       [PolygonCreator, 'Polygon Creator', true],
       [PolylineCreator, 'Polyline Creator', true],
+      [GradientPolylines, 'Gradient Polylines', true],
       [AnimatedViews, 'Animating with MapViews'],
       [AnimatedMarkers, 'Animated Marker Position'],
       [Callouts, 'Custom Callouts', true],
@@ -150,7 +156,11 @@ class App extends React.Component {
       [LegalLabel, 'Reposition the legal label', true],
       [SetNativePropsOverlays, 'Update native props', true],
       [CustomOverlay, 'Custom Overlay Component', true],
+      [MapKml, 'Load Map with KML', true],
       [BugMarkerWontUpdate, 'BUG: Marker Won\'t Update (Android)', true],
+      [ImageOverlayWithAssets, 'Image Overlay Component with Assets', true],
+      [ImageOverlayWithURL, 'Image Overlay Component with URL', true],
+      [OnPoiClick, 'On Poi Click', true],
       [Heatmap, 'Heat Map'],
     ]
     // Filter out examples that are not yet supported for Google Maps on iOS.
@@ -191,4 +201,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = App;
+export default App;
