@@ -17,6 +17,7 @@
 #import "AIRMapCircle.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AIRMapUrlTile.h"
+#import "AIRMapHeatmap.h"
 #import "AIRMapLocalTile.h"
 #import "AIRMapOverlay.h"
 
@@ -121,12 +122,19 @@ const NSInteger AIRMapMaxZoomLevel = 20;
     } else if ([subview isKindOfClass:[AIRMapUrlTile class]]) {
         ((AIRMapUrlTile *)subview).map = self;
         [self addOverlay:(id<MKOverlay>)subview];
+<<<<<<< HEAD
+    } else if ([subview isKindOfClass:[AIRMapHeatmap class]]) {
+        ((AIRMapHeatmap *) subview).map = self;
+        [self addOverlay:(id <MKOverlay>)subview];
+
+=======
     } else if ([subview isKindOfClass:[AIRMapLocalTile class]]) {
         ((AIRMapLocalTile *)subview).map = self;
         [self addOverlay:(id<MKOverlay>)subview];
     } else if ([subview isKindOfClass:[AIRMapOverlay class]]) {
         ((AIRMapOverlay *)subview).map = self;
         [self addOverlay:(id<MKOverlay>)subview];
+>>>>>>> 09a52924c7511383e1bf2960f59f7be34480c857
     } else {
         NSArray<id<RCTComponent>> *childSubviews = [subview reactSubviews];
         for (int i = 0; i < childSubviews.count; i++) {
@@ -152,10 +160,16 @@ const NSInteger AIRMapMaxZoomLevel = 20;
         [self removeOverlay:(id <MKOverlay>) subview];
     } else if ([subview isKindOfClass:[AIRMapUrlTile class]]) {
         [self removeOverlay:(id <MKOverlay>) subview];
+<<<<<<< HEAD
+    } else if ([subview isKindOfClass:[AIRMapHeatmap class]]) {
+        [self removeOverlay:(id <MKOverlay>) subview];
+
+=======
     } else if ([subview isKindOfClass:[AIRMapLocalTile class]]) {
         [self removeOverlay:(id <MKOverlay>) subview];
     } else if ([subview isKindOfClass:[AIRMapOverlay class]]) {
         [self removeOverlay:(id <MKOverlay>) subview];
+>>>>>>> 09a52924c7511383e1bf2960f59f7be34480c857
     } else {
         NSArray<id<RCTComponent>> *childSubviews = [subview reactSubviews];
         for (int i = 0; i < childSubviews.count; i++) {
